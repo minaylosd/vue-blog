@@ -1,0 +1,41 @@
+[
+  {
+    "id": 1,
+    "category": "Insights",
+    "time": "10 min",
+    "article": "Academy",
+    "date": "05 June 2023",
+    "author": "Michael Johnson",
+    "description": "With Voltoges‘s commercial storage solutions, commercial and agricultural businesses can optimize their own consumption and thus increase their profitability and independence from the power grid. Voltoges‘s Commercial.",
+    "scale": 1,
+    "opacity": 1,
+    "stickerScale": 0,
+    "stickerRadius": 9999
+  },
+  {
+    "id": 2,
+    "category": "Insights",
+    "time": "5 min",
+    "article": "Sources",
+    "date": "06 June 2023",
+    "author": "Elizabeth Ericson",
+    "description": "Batteries are specifically designed to meet the requirements of these industries. Thanks to the use of ecological redox flow technology, they are also excellent in terms of safety and durability.",
+    "scale": 1,
+    "opacity": 1,
+    "stickerScale": 0,
+    "stickerRadius": 9999
+  },
+  {
+    "id": 3,
+    "category": "Insights",
+    "time": "8 min",
+    "article": "Applications",
+    "date": "22 June 2023",
+    "author": "Michael Johnson",
+    "description": "In light of advancing political and social efforts to combat climate change, the energy supply is currently in a state of comprehensive change. The generation and use of climate-friendly forms of energy is of crucial importance in this context.",
+    "scale": 1,
+    "opacity": 1,
+    "stickerScale": 0,
+    "stickerRadius": 9999
+  }
+]
