@@ -34,13 +34,13 @@
           >
             <div class="info__column">
               <div class="info__wrapper">
-                <div class="category">{{ card.category }}</div>
-                <div class="time">{{ card.time }}</div>
+                <div class="category">{{ card.categories[0].title }}</div>
+                <div class="time">{{ card.readingTime }}</div>
               </div>
-              <h2 class="article">{{ card.article }}</h2>
+              <h2 class="article">{{ card.title }}</h2>
               <div class="info__wrapper">
-                <div class="info">{{ card.date }}</div>
-                <div class="info">{{ card.author }}</div>
+                <div class="info">{{ card.publishedAt }}</div>
+                <div class="info">{{ card.authorName }}</div>
               </div>
             </div>
             <div class="movable">
@@ -276,6 +276,7 @@
 //     HelloWorld,
 //   },
 // };
+import { client } from "../sanity";
 import { gsap } from "gsap";
 import jsonData from "../assets/data.json";
 
@@ -286,8 +287,19 @@ export default {
       hoveredIndex: null,
     };
   },
-  mounted() {
-    this.items = jsonData;
+  // mounted() {
+  //   this.items = jsonData;
+  // },
+  async mounted() {
+    try {
+      const posts = await client.fetch(
+        '*[_type == "post"]{..., "authorName": author->name, categories[]->{title}}'
+      );
+      this.items = posts;
+      console.log(posts);
+    } catch (err) {
+      console.error(err);
+    }
   },
   methods: {
     handleMouseOver(index) {
