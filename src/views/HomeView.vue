@@ -47,7 +47,7 @@
               <div class="movable__overflow">
                 <img
                   class="movable__image"
-                  src="/images/img2.jpg"
+                  :src="urlFor(card.mainImage).url()"
                   alt="cursor image"
                 />
                 <div class="sticker__wrapper">
@@ -279,6 +279,9 @@
 import { client } from "../sanity";
 import { gsap } from "gsap";
 import jsonData from "../assets/data.json";
+import imageUrlBuilder from "@sanity/image-url";
+
+const builder = imageUrlBuilder(client);
 
 export default {
   data() {
@@ -319,6 +322,9 @@ export default {
       let posX = event.screenX - 0.5 * width - 0.5 * movableWidth;
       let posY = event.screenY - 0.5 * height - 0.5 * movableHeight;
       gsap.to(movable, { y: posY, x: posX, delay: 0.2 });
+    },
+    urlFor(source) {
+      return builder.image(source);
     },
   },
 };

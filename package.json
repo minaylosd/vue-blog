@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@sanity/client": "^6.17.2",
+    "@sanity/image-url": "^1.0.2",
     "core-js": "^3.8.3",
     "gsap": "^3.12.5",
     "vue": "^3.2.13",
